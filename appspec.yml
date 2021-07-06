@@ -1,0 +1,16 @@
+version: 0.2
+os: linux
+files:
+  - source: /index.html
+    destination: /var/www/html
+phases:
+  install:
+    commands:
+      - yum update -y
+      - yum install httpd -y
+      - service httpd start
+      - chkconfig httpd on
+
+  
+  
+    
